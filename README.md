@@ -95,11 +95,65 @@ There should be an output similar to the one below with the individual i2c devic
 ```
 Test the IMU stream with:
 ```
+import board
+import busio
+from adafruit_bno08x.i2c import BNO08X_I2C
+from adafruit_bno08x import BNO_REPORT_ACCELEROMETER
+from adafruit_bno08x import BNO_REPORT_ROTATION_VECTOR
+
+i2c = busio.I2C(board.SCL, board.SDA)
+bno = BNO08X_I2C(i2c)
+bno.enable_feature(BNO_REPORT_ACCELEROMETER)
+bno.enable_feature(BNO_REPORT_ROTATION_VECTOR)
+
+while True:
+    accel_x, accel_y, accel_z = bno.acceleration  # pylint:disable=no-member
+    i, j, k, w = bno.quaternion  # pylint:disable=no-member
+    print("X: %0.6f  Y: %0.6f Z: %0.6f  m/s^2" % (accel_x, accel_y, accel_z))
+    print("I: %0.6f J: %0.6f K: %0.6f REAL: %0.6f" % (i,j,k,w))
+
+```
+```
 (venv) $ python3 imu_test.py
 ```
 
 10. Adafruit MiniGPS PA1010D help can be found on the following [instrustructions](https://learn.adafruit.com/adafruit-mini-gps-pa1010d-module/circuitpython-python-i2c-usage).
 Test the GPS stream with:
+```
+import time
+import board
+import busio
+
+import adafruit_gps
+
+# If using I2C, we'll create an I2C interface to talk to using default pins
+i2c = board.I2C()  # uses board.SCL and board.SDA
+
+# Create a GPS module instance.
+gps = adafruit_gps.GPS_GtopI2C(i2c)  # Use I2C interface
+
+# Turn on the basic GGA and RMC info (what you typically want)
+gps.send_command(b"PMTK314,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0")
+
+# Set update rate to once a second (1hz) which is what you typically want.
+gps.send_command(b"PMTK220,1000")
+
+# Main loop runs forever printing data as it comes in
+timestamp = time.monotonic()
+while True:
+    data = gps.read(32)  # read up to 32 bytes
+    # print(data)  # this is a bytearray type
+
+    if data is not None:
+        # convert bytearray to string
+        data_string = "".join([chr(b) for b in data])
+        print(data_string, end="")
+
+    if time.monotonic() - timestamp > 5:
+        # every 5 seconds...
+        gps.send_command(b"PMTK605")  # request firmware version
+        timestamp = time.monotonic()
+```
 ```
 (venv) $ python3 gps_test.py
 ```
