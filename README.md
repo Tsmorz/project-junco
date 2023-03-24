@@ -104,9 +104,10 @@ Test the GPS stream with:
 (venv) $ python3 gps_test.py
 ```
 
-11. Install the servo board software from Adafruit. A helpful page can be found [here](https://jetsonhacks.com/2019/07/22/jetson-nano-using-i2c/) and a video can be found [here](https://www.youtube.com/watch?v=RnGUTny1hG8).
+11. Install the servo board [software](https://docs.circuitpython.org/projects/servokit/en/latest/) from [Adafruit](https://learn.adafruit.com/16-channel-pwm-servo-driver?view=all&gclid=Cj0KCQjwlPWgBhDHARIsAH2xdNchkmeukeVPBQ1IYITSDNilWz4_tKLZpCee6GZLfH17hK6oDafZ5_0aAszsEALw_wcB#python-circuitpython). A helpful page can be found [here](https://jetsonhacks.com/2019/07/22/jetson-nano-using-i2c/) and a video can be found [here](https://www.youtube.com/watch?v=RnGUTny1hG8).
 ```
-(venv) $ 
+(venv) $ pip3 install adafruit-circuitpython-pca9685
+(venv) $ pip3 install adafruit-circuitpython-servokit
 ```
 | Name | Color | Pin |
 | --- | --- | --- |
@@ -129,3 +130,11 @@ Test the GPS stream with:
 60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
 70: 70 -- -- -- -- -- -- --                         
 ```
+
+13. Test the servos for movement:
+```
+(venv) $ 
+```
+
+
+14. 
