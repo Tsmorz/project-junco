@@ -219,7 +219,13 @@ kit.continuous_servo[1].throttle = 0
 (venv) $ sudo cp ./scripts/dualshock4.py /usr/local/lib/python3.6/dist-packages/approxeng/input/dualshock4.py
 ```
 
-15. Test controller and servos:
+15. Pair DualShock4 controller with Jetson Nano over bluetooth.
+- open bluetooth settings and click the + to add a device
+- filter so only "Joypad" is visible
+- while pressing and holding the SHARE button, press and hold the PS Button until the light bar flashes. Enable Bluetooth on your device, and then select the controller from the list of Bluetooth devices. When pairing is complete, the light bar blinks, and then the player indicator lights up.
+- add the wireless controller
+
+17. Test controller and servos:
 
 ```
 # SDA = pin.SDA_1
