@@ -24,6 +24,15 @@ Some physical phenomenon that are modeled include:
   - Euler bending beam theory for thin structures (torsion and bending)
   - Battery considerations for electric flight
 
+# Equipment Purchasing
+ 
+| Name | Units | Unit Cost |
+| --- | --- | --- |
+| VIN | red | 2 |
+| GND | black | 6 |
+| SDA | blue | 3 |
+| SCL | yellow | 5 |
+
 # Jetson Nano - Setup
 1. Download and install the SD card image onto the Nano. Official instructions on [Nvidia](https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit#write).
 
