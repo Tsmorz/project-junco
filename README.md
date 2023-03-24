@@ -23,3 +23,14 @@ Some physical phenomenon that are modeled include:
   - Taper ratio and induced drag
   - Euler bending beam theory for thin structures (torsion and bending)
   - Battery considerations for electric flight
+
+## Jetson Nano - Setup
+1. Download and install the SD card image onto the Nano. Official instructions on [Nvidia](https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit#write).
+2. Increase the swap on the Nano. Official instructions on [Youtube](https://youtu.be/uvU8AXY1170).
+3. Update the Jetson Nano
+```
+$ sudo apt update && sudo apt upgrade
+```
+4.
+5.
+6.
