@@ -1,0 +1,8 @@
+pygame
+python3
+python-venv
+numpy
+cv2
+jupyter notebook
+docker
+
