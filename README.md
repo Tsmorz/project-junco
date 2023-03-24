@@ -88,7 +88,7 @@ Test the IMU stream with:
 (venv) $ python3 imu_test.py
 ```
 
-8. Adafruit MiniGPS PA1010D help can be found on the following [instrustructions](https://learn.adafruit.com/adafruit-mini-gps-pa1010d-module/circuitpython-python-i2c-usage)
+8. Adafruit MiniGPS PA1010D help can be found on the following [instrustructions](https://learn.adafruit.com/adafruit-mini-gps-pa1010d-module/circuitpython-python-i2c-usage).
 Test the GPS stream with:
 ```
 (venv) $ python3 gps_test.py
