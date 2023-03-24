@@ -51,6 +51,17 @@ $ source .venv/bin/activate
 (venv) $ pip3 install --upgrade setuptools
 ```
 
+6. Install i2c development tools in venv:
+```
+$ sudo apt-get install libi2c-dev i2c-tools
+$ sudo usermod -a -G i2c $USER
+```
+
+7. Testing for connect i2c devices:
+```
+$ sudo i2cdetect -y -r 1
+```
+
 6. Install [Adafruit Blinka](https://pypi.org/project/Adafruit-Blinka/) in venv:
 ```
 $ pip3 install adafruit-blinka
@@ -63,17 +74,6 @@ $ pip3 install adafruit-circuitpython-bno08x
 Test the IMU stream with:
 ```
 $ python3 imu_test.py
-```
-
-6. Install i2c development tools in venv:
-```
-$ sudo apt-get install libi2c-dev i2c-tools
-$ sudo usermod -a -G i2c $USER
-```
-
-7. Testing for connect i2c devices:
-```
-$ sudo i2cdetect -y -r 1
 ```
 
 8. Adafruit MiniGPS PA1010D help can be found on the following [instrustructions](https://learn.adafruit.com/adafruit-mini-gps-pa1010d-module/circuitpython-python-i2c-usage)
