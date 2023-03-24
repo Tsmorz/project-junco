@@ -32,5 +32,8 @@ Some physical phenomenon that are modeled include:
 $ sudo apt update && sudo apt upgrade
 ```
 4.
+```
+$ sudo apt install python-pip python3-pip
+```
 5.
 6.
