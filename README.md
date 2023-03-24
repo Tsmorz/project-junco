@@ -53,27 +53,43 @@ $ source .venv/bin/activate
 
 6. Install i2c development tools in venv:
 ```
-$ sudo apt-get install libi2c-dev i2c-tools
-$ sudo usermod -a -G i2c $USER
+(venv) $ sudo apt-get install libi2c-dev i2c-tools
+(venv) $ sudo usermod -a -G i2c $USER
 ```
 
 7. Testing for connect i2c devices:
 ```
-$ sudo i2cdetect -y -r 1
+(venv) $ sudo i2cdetect -y -r 1
+```
+There should be an output similar to the one below with the individual i2c devices corresponding the the IDs.
+```
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:          -- -- -- -- -- -- -- -- -- -- -- -- -- 
+10: 10 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+40: -- -- -- -- -- -- -- -- -- -- 4a -- -- -- -- -- 
+50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+70: -- -- -- -- -- -- -- --                         
 ```
 
 6. Install [Adafruit Blinka](https://pypi.org/project/Adafruit-Blinka/) in venv:
 ```
-$ pip3 install adafruit-blinka
+(venv) $ pip3 install adafruit-blinka
 ```
 
 5. Adafruit 9-DOF Orientation IMU Fusion Breakout - BNO085 help can be found on the following [instrustructions](https://github.com/adafruit/Adafruit_CircuitPython_BNO08x). Install in venv:
 ```
-$ pip3 install adafruit-circuitpython-bno08x
+(venv) $ pip3 install adafruit-circuitpython-bno08x
 ```
 Test the IMU stream with:
 ```
-$ python3 imu_test.py
+(venv) $ python3 imu_test.py
 ```
 
 8. Adafruit MiniGPS PA1010D help can be found on the following [instrustructions](https://learn.adafruit.com/adafruit-mini-gps-pa1010d-module/circuitpython-python-i2c-usage)
+Test the GPS stream with:
+```
+(venv) $ python3 gps_test.py
+```
