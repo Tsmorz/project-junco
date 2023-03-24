@@ -24,7 +24,7 @@ Some physical phenomenon that are modeled include:
   - Euler bending beam theory for thin structures (torsion and bending)
   - Battery considerations for electric flight
 
-## Jetson Nano - Setup
+# Jetson Nano - Setup
 1. Download and install the SD card image onto the Nano. Official instructions on [Nvidia](https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit#write).
 
 2. Increase the swap on the Nano. Official instructions on [Youtube](https://youtu.be/uvU8AXY1170).
@@ -74,12 +74,22 @@ There should be an output similar to the one below with the individual i2c devic
 70: -- -- -- -- -- -- -- --                         
 ```
 
-6. Install [Adafruit Blinka](https://pypi.org/project/Adafruit-Blinka/) in venv:
+8. Install [Adafruit Blinka](https://pypi.org/project/Adafruit-Blinka/) in venv:
 ```
 (venv) $ pip3 install adafruit-blinka
 ```
 
-5. Adafruit 9-DOF Orientation IMU Fusion Breakout - BNO085 help can be found on the following [instrustructions](https://github.com/adafruit/Adafruit_CircuitPython_BNO08x). Install in venv:
+9. Connect the external sensors to the Jetson Nano. This is for the GPS and IMU with Stemma QT ports.
+ 
+| Name | Color | Pin |
+| --- | --- | --- |
+| VIN | red | 2 |
+| GND | black | 6 |
+| SDA | blue | 3 |
+| SCL | yellow | 5 |
+
+
+10. Adafruit 9-DOF Orientation IMU Fusion Breakout - BNO085 help can be found on the following [instrustructions](https://github.com/adafruit/Adafruit_CircuitPython_BNO08x). Install in venv:
 ```
 (venv) $ pip3 install adafruit-circuitpython-bno08x
 ```
@@ -88,8 +98,34 @@ Test the IMU stream with:
 (venv) $ python3 imu_test.py
 ```
 
-8. Adafruit MiniGPS PA1010D help can be found on the following [instrustructions](https://learn.adafruit.com/adafruit-mini-gps-pa1010d-module/circuitpython-python-i2c-usage).
+10. Adafruit MiniGPS PA1010D help can be found on the following [instrustructions](https://learn.adafruit.com/adafruit-mini-gps-pa1010d-module/circuitpython-python-i2c-usage).
 Test the GPS stream with:
 ```
 (venv) $ python3 gps_test.py
+```
+
+11. Install the servo board software from Adafruit. A helpful page can be found [here](https://jetsonhacks.com/2019/07/22/jetson-nano-using-i2c/) and a video can be found [here](https://www.youtube.com/watch?v=RnGUTny1hG8).
+```
+(venv) $ 
+```
+| Name | Color | Pin |
+| --- | --- | --- |
+| VIN | red | 17 (3V3) |
+| GND | black | 39 |
+| SDA | blue | 27 |
+| SCL | yellow | 28 |
+
+12. Check for proper wiring and i2c detection:
+```
+(venv) $ i2cdetect -y -r 0
+
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:          -- -- -- -- -- -- -- -- -- -- -- -- -- 
+10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+40: 40 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+70: 70 -- -- -- -- -- -- --                         
 ```
