@@ -46,9 +46,9 @@ $ source .venv/bin/activate
 
 5. Install Python and Pip in venv
 ```
-$ apt install python-pip python3-pip
-$ pip3 install testresources
-$ pip3 install --upgrade setuptools
+(venv) $ apt install python-pip python3-pip
+(venv) $ pip3 install testresources
+(venv) $ pip3 install --upgrade setuptools
 ```
 
 6. Install [Adafruit Blinka](https://pypi.org/project/Adafruit-Blinka/) in venv:
@@ -59,6 +59,10 @@ $ pip3 install adafruit-blinka
 5. Adafruit 9-DOF Orientation IMU Fusion Breakout - BNO085 help can be found on the following [instrustructions](https://github.com/adafruit/Adafruit_CircuitPython_BNO08x). Install in venv:
 ```
 $ pip3 install adafruit-circuitpython-bno08x
+```
+Test the IMU stream with:
+```
+$ python3 imu_test.py
 ```
 
 6. Install i2c development tools in venv:
