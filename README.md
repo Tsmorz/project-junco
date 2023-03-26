@@ -243,6 +243,8 @@ kit.continuous_servo[1].throttle = 0
 (venv) $ pip3 install approxeng.input
 (venv) $ sudo cp ./scripts/dualshock4.py /usr/local/lib/python3.6/dist-packages/approxeng/input/dualshock4.py
 ```
+DualShock4, axes=['Left Horizontal=0', 'Left Vertical=0', 'Right Horizontal=0', 'Right Vertical=0', 'Left Trigger=0', 'Right Trigger=0', 'D-pad Horizontal=0', 'D-pad Vertical=0', 'Yaw rate=0', 'Roll=0', 'Pitch=0', 'Touch X=0', 'Touch Y=0'], buttons=<approxeng.input.Buttons object at 0x7fcaf5bf77f0>
+
 
 15. Pair DualShock4 controller with Jetson Nano over bluetooth.
 - open bluetooth settings and click the + to add a device
