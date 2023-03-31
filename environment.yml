@@ -1,0 +1,11 @@
+name: junco-env
+dependencies:
+- python=3
+- numpy
+- cvxopt
+- pip
+- matplotlib
+- ipykernel
+- pip:
+  # works for regular pip packages
+  - gym
