@@ -9,3 +9,4 @@ dependencies:
 - pip:
   # works for regular pip packages
   - gym
+  - git+https://github.com/python-control/python-control.git
