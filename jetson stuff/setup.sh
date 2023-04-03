@@ -14,6 +14,10 @@ apt install python-pip python3-pip
 pip3 install testresources
 pip3 install --upgrade setuptools
 
+# install git
+pip install python-git
+git clone git@github.com:Tsmorz/project-junco.git
+
 # install i2c software
 apt-get install libi2c-dev i2c-tools
 sudo usermod -a -G i2c $USER

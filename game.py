@@ -24,7 +24,7 @@ class Tetris(QMainWindow):
 
         self.tboard.start()
 
-        self.resize(80, 380)
+        self.resize(500, 200)
         self.center()
         self.setWindowTitle('Tetris')
         self.show()
@@ -41,9 +41,9 @@ class Tetris(QMainWindow):
 class Board(QFrame):
     msg2Statusbar = pyqtSignal(str)
 
-    BoardWidth = 10
+    BoardWidth = 50
     BoardHeight = 22
-    Speed = 300
+    Speed = 10
 
     def __init__(self, parent):
         super().__init__(parent)
