@@ -69,6 +69,11 @@ $ python3 -m venv .venv
 $ source .venv/bin/activate
 ```
 
+5. ROS install
+
+```
+$ scripts/docker_run.sh -c dustynv/ros:noetic-ros-base-l4t-r35.2.1
+```
 5. Install Python and Pip in venv
 ```
 (venv) $ apt install python-pip python3-pip
