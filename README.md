@@ -78,6 +78,11 @@ $ mkdir project-junco && cd project-junco
 $ python3 -m venv venv-junco
 $ source venv-junco/bin/activate
 ```
+5. Edit .bashrc file
+```
+# add this line after the rest of your aliases
+alias venv='source ~/project-junco/venv-junco/bin/activate'
+```
 
 5. Install Python and Pip in venv
 ```
@@ -86,7 +91,7 @@ $ source venv-junco/bin/activate
 (venv) $ pip3 install --upgrade setuptools
 ```
 
-5. ROS install
+## ROS install
 
 ```
 $ sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
