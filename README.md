@@ -86,7 +86,7 @@ alias venv='source ~/project-junco/venv-junco/bin/activate'
 
 5. Install Python and Pip in venv
 ```
-(venv) $ apt install python-pip python3-pip
+(venv) $ sudo apt install python-pip python3-pip
 (venv) $ pip3 install testresources
 (venv) $ pip3 install --upgrade setuptools
 ```
@@ -137,7 +137,7 @@ There should be an output similar to the one below with the individual i2c devic
 
 8. Install [Adafruit Blinka](https://pypi.org/project/Adafruit-Blinka/) in venv:
 ```
-(venv) $ pip3 install adafruit-blinka
+(venv) $ sudo -H pip3 install adafruit-blinka
 ```
 
 9. Connect the external sensors to the Jetson Nano. This is for the GPS and IMU with Stemma QT ports.
@@ -152,7 +152,10 @@ There should be an output similar to the one below with the individual i2c devic
 
 10. Adafruit 9-DOF Orientation IMU Fusion Breakout - BNO085 help can be found on the following [instrustructions](https://github.com/adafruit/Adafruit_CircuitPython_BNO08x). Install in venv:
 ```
-(venv) $ pip3 install adafruit-circuitpython-bno08x
+(venv) $ sudo apt update
+sudo apt upgrade
+sudo apt install nano
+pip3 install adafruit-circuitpython-bno08x
 ```
 Test the IMU stream with:
 ```
