@@ -75,8 +75,15 @@ $ sudo apt upgrade
 ```
 $ sudo apt-get install python3-venv
 $ mkdir project-junco && cd project-junco
-$ python3 -m venv .venv
-$ source .venv/bin/activate
+$ python3 -m venv venv-junco
+$ source venv-junco/bin/activate
+```
+
+5. Install Python and Pip in venv
+```
+(venv) $ apt install python-pip python3-pip
+(venv) $ pip3 install testresources
+(venv) $ pip3 install --upgrade setuptools
 ```
 
 5. ROS install
@@ -98,12 +105,7 @@ $ sudo apt install python-rosdep
 $ sudo rosdep init
 $ rosdep update
 ```
-5. Install Python and Pip in venv
-```
-(venv) $ apt install python-pip python3-pip
-(venv) $ pip3 install testresources
-(venv) $ pip3 install --upgrade setuptools
-```
+
 
 6. Install i2c development tools in venv:
 ```
