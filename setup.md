@@ -22,6 +22,7 @@ $ sudo reboot
 ```
 $ sudo apt update
 $ sudo apt upgrade
+$ sudo reboot
 ```
 
 4. Setup virtual environments
