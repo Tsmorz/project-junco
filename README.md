@@ -50,6 +50,7 @@ Some physical phenomenon that are modeled include:
 
 
 # Jetson Nano - Setup
+Go to [setup page](setup.md)
 1. Download and install the SD card image onto the Nano. Official instructions on [Nvidia](https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit#write).
 
 2. Increase the swap on the Nano. Official instructions on [Youtube](https://youtu.be/uvU8AXY1170).
