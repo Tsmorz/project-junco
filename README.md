@@ -30,3 +30,9 @@ Go to [equipment page](equipment.md)
 
 ## Jetson Nano - Setup
 Go to [setup page](setup.md)
+
+## ROS install
+Go to [ros install page](ros_setup.md)
+
+## Adafruit Blinka install
+Go to [blinka install page](blinka_setup.md)
