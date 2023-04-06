@@ -9,11 +9,15 @@ $ sudo fallocate -l 4G /mnt/4GB.swap
 $ sudo chmod 600 /mnt/4GB.swap
 $ sudo mkswap /mnt/4GB.swap
 $ sudo vi /etc/fstab
-
+```
+```
 # add the line below
 /mnt/4GB.swap swap swap defaults 0 0
-
 ```
+```
+$ sudo reboot
+```
+
 3. Update the Jetson Nano
 ```
 $ sudo apt update
@@ -27,14 +31,19 @@ $ mkdir project-junco && cd project-junco
 $ python3 -m venv venv-junco
 $ source venv-junco/bin/activate
 ```
+
 5. Edit .bashrc file
 ```
 # add this line after the rest of your aliases
 alias venv='source ~/project-junco/venv-junco/bin/activate'
 ```
+```
+$ sudo reboot
+```
 
 5. Install Python and Pip in venv
 ```
+$ venv
 (venv) $ sudo apt install python-pip python3-pip
 (venv) $ pip3 install testresources
 (venv) $ pip3 install --upgrade setuptools
