@@ -31,8 +31,24 @@ Go to [equipment page](equipment.md)
 ## Jetson Nano - Setup
 Go to [setup page](setup.md)
 
-## ROS install
+## ROS and Adafruit-Blinka install
 Go to [ros install page](ros_setup.md)
 
-## Adafruit Blinka install
-Go to [blinka install page](blinka_setup.md)
+## 2D Flight Simulator
+Go to [2D Flight Simulator page](flight_sim.md)
+
+## Structural Design
+Go to [2D Flight Simulator page](flight_sim.md)
+
+## Navigation
+Go to [2D Flight Simulator page](flight_sim.md)
+
+## Sensor Characterization
+Go to [2D Flight Simulator page](flight_sim.md)
+
+## Communication Systems
+Go to [2D Flight Simulator page](flight_sim.md)
+
+## Power Suppy Systems
+Go to [2D Flight Simulator page](flight_sim.md)
+
