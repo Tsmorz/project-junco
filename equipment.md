@@ -9,7 +9,7 @@
 | [IMU](https://www.adafruit.com/product/4754) | 1 | |
 | [Differential Pressure Sensor](https://www.sparkfun.com/products/17874) | 1 | |
 | [Time of Flight Sensor](https://www.adafruit.com/product/5425) | 1 | |
-| [atmos sensor](https://www.adafruit.com/product/4716) |  | |
+| [atmos sensor](https://www.adafruit.com/product/2652) |  | |
 | [fan for jetson](https://www.amazon.com/gp/product/B07TYZ3RG5/ref=ppx_yo_dt_b_asin_title_o00_s02?ie=UTF8&th=1) | 1 | |
 | [servos](https://www.horizonhobby.com/product/hs-85mg-micro-analog-metal-gear-servo/HRC32085S.html) | 1 | |
 | [servo cables](https://www.adafruit.com/product/973) | 4 | |
