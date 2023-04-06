@@ -24,31 +24,30 @@ Some physical phenomenon that are modeled include:
   - Euler bending beam theory for thin structures (torsion and bending)
   - Battery considerations for electric flight
 
-## Equipment Purchasing
+## 1. Equipment Purchasing
 Go to [equipment page](equipment.md)
 
-
-## Jetson Nano - Setup
+## 2. Jetson Nano - Setup
 Go to [setup page](setup.md)
 
-## ROS and Adafruit-Blinka install
+## 3. ROS and Adafruit-Blinka install
 Go to [ros install page](ros_setup.md)
 
-## 2D Flight Simulator
+## 4. 2D Flight Simulator
 Go to [2D Flight Simulator page](flight_sim.md)
 
-## Structural Design
+## 5. Structural Design
 Go to [2D Flight Simulator page](flight_sim.md)
 
-## Navigation
+## 6. Navigation
 Go to [2D Flight Simulator page](flight_sim.md)
 
-## Sensor Characterization
+## 7. Sensor Characterization
 Go to [2D Flight Simulator page](flight_sim.md)
 
-## Communication Systems
+## 8. Communication Systems
 Go to [2D Flight Simulator page](flight_sim.md)
 
-## Power Suppy Systems
+## 9. Power Suppy Systems
 Go to [2D Flight Simulator page](flight_sim.md)
 
