@@ -27,8 +27,6 @@ $ sudo reboot
 
 4. Setup virtual environments
 ```
-$ sudo apt install python3-pip
-$ pip3 install --upgrade pip
 $ apt-get install python3-venv
 $ mkdir ~/Documents/junco && cd ~/Documents/junco
 $ python3 -m venv venv-junco
