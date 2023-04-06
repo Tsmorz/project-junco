@@ -1,9 +1,3 @@
----
-title: ABOUT PAGE
-layout: template
-filename: about.md
---- 
-
 # Jetson Nano - Setup
 1. Download and install the SD card image onto the Nano. Official instructions on [Nvidia](https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit#write).
 
