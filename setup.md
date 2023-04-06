@@ -27,8 +27,10 @@ $ sudo reboot
 
 4. Setup virtual environments
 ```
-$ sudo apt-get install python3-venv
-$ mkdir project-junco && cd project-junco
+$ sudo apt install python3-pip
+$ pip3 install --upgrade pip
+$ apt-get install python3-venv
+$ mkdir ~/Documents/junco && cd ~/Documents/junco
 $ python3 -m venv venv-junco
 $ source venv-junco/bin/activate
 ```
@@ -36,7 +38,7 @@ $ source venv-junco/bin/activate
 5. Edit .bashrc file
 ```
 # add this line after the rest of your aliases
-alias venv='source ~/project-junco/venv-junco/bin/activate'
+alias venv='source ~/Documents/junco/venv-junco/bin/activate'
 ```
 ```
 $ sudo reboot
