@@ -4,17 +4,7 @@ RC Fixed Wing for Mobile Robotics at Northeastern University
 <img src="https://user-images.githubusercontent.com/83112082/219784226-13e02755-722b-4fa2-a51d-c8f658bcd7af.jpg" width="80%" height="80%">
 
 ## About the program
-I tried to be very complete in creating a useful model to streamline the initial design phase. The model is not without assumptions but (in my opinion) represents a helpful tool in novel a/c design.
-\
-\
-Some physical phenomenon that are modeled include:
-  - Skin friction drag with a boundary layer theory.
-  - Form drag from airfoil data
-  - FAA structural loading limits
-  - Disk loading to estimate hovering power costs
-  - Taper ratio and induced drag
-  - Euler bending beam theory for thin structures (torsion and bending)
-  - Battery considerations for electric flight
+Open-source fixed-wing ROS-based platform for robotics researchers.
 
 ## 1. Equipment Purchasing
 Go to [equipment page](equipment.md)
