@@ -49,7 +49,7 @@ $ venv
 (venv) $ pip3 install testresources
 (venv) $ pip3 install --upgrade setuptools
 (venv) $ pip install -U pip setuptools 
-
+(venv) $ pip install wheel
 ```
 
 ## ROS install
