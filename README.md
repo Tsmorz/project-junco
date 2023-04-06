@@ -89,6 +89,8 @@ alias venv='source ~/project-junco/venv-junco/bin/activate'
 (venv) $ sudo apt install python-pip python3-pip
 (venv) $ pip3 install testresources
 (venv) $ pip3 install --upgrade setuptools
+(venv) $ pip install -U pip setuptools 
+
 ```
 
 ## ROS install
