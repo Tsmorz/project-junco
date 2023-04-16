@@ -2,6 +2,7 @@ name: junco-env
 dependencies:
 - python=3
 - numpy
+- scipy
 - cvxopt
 - pip
 - matplotlib
