@@ -25,6 +25,43 @@ $ sudo apt upgrade
 $ sudo reboot
 ```
 
+3. Update the Jetson Nano
+```
+$ sudo apt update
+$ sudo apt upgrade
+$ sudo autoremove
+```
+
+3. Update the Jetson Nano
+```
+$ sudo apt install python3-pip
+$ pip3 install --upgrade setuptools
+$ pip3 install wheel
+$ pip3 install testresources
+$ pip3 install -U pip setuptools
+```
+
+4.
+```
+$ sudo /opt/nvidia/jetson-io/jetson-io.py
+```
+
+
+5.
+```
+$ sudo groupadd -f -r gpio
+$ sudo usermod -a -G gpio jetsmorz
+$ cd ~
+$ git clone https://github.com/NVIDIA/jetson-gpio.git 
+$ sudo cp ~/jetson-gpio/lib/python/Jetson/GPIO/99-gpio.rules /etc/udev/rules.d
+$ sudo reboot
+```
+
+5.
+```
+$ pip3 install adafruit-blinka
+```
+
 4. Setup virtual environments
 ```
 $ apt-get install python3-venv
