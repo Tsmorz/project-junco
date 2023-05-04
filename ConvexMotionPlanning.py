@@ -16,7 +16,6 @@ def pathlens(path_points):
         dist[i] = math.dist(path_points[i, 0,:], path_points[i,1,:])
     return dist
 
-
 def calculateOccupancyGrid(constraints):
     yv, xv = np.meshgrid(range(0, 200), range(0, 200))
     og = np.zeros_like(xv)
@@ -98,9 +97,9 @@ def localTrajOpt(A, B, tEnd, og, referencePoints, referencePointsDyn, xstart, xg
 
     for i in range(tEnd+1):
         cords = searchFromCord([Refs0[i],Refs1[i]], directs, og, limit = 20)
-        hbar[i*numDirections:(i+1)*numDirections, 0] = np.sum(directs*(cords-np.array([Refs0[i],Refs1[i]])+np.array([RefsDyn0[i],RefsDyn1[i]])), axis=1)
+        hbar[i*numDirections:(i+1)*numDirections, 0] = np.sum(directs*(cords-np.array([Refs0[i],Refs1[i]])+np.array([RefsDyn0[i],RefsDyn1[i]])), axis=1)-1*i/tEnd
         Gbar[i*numDirections:(i+1)*numDirections, i*(dimX+dimU):i*(dimX+dimU)+2] = np.flip(directs, axis = 1)
-    hbar = hbar -0.5
+    hbar = hbar
 
     IA = np.eye(dimX)
     Abar = np.zeros((dimX*(tEnd+1),(dimX+dimU)*tEnd+dimX))
@@ -125,7 +124,11 @@ def localTrajOpt(A, B, tEnd, og, referencePoints, referencePointsDyn, xstart, xg
     finalStateWeight = 100
     Qbar = np.zeros(((dimX+dimU)*(tEnd)+dimX,(dimX+dimU)*(tEnd)+dimX))
     IU = np.eye(dimU)
+    psiDotWeight = 1000
     for i in range(tEnd):
+        psiDotIndex = i*(dimX+dimU)+5
+        Qbar[psiDotIndex, psiDotIndex] = psiDotWeight
+
         leftInd = i*(dimX+dimU)+dimX
         righInd =  (i)*(dimX+dimU)+dimU+dimX
         upInd = i*(dimX+dimU)+dimX
