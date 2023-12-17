@@ -44,6 +44,9 @@ There should be an output similar to the one below with the individual i2c devic
 
 8. Install [Adafruit Blinka](https://pypi.org/project/Adafruit-Blinka/) in venv:
 ```
+$ sudo apt install python3-testresources
+$ pip install --upgrade setuptools
+$ sudo apt-get install python3.6-dev libmysqlclient-dev
 (venv) $ sudo -H pip3 install adafruit-blinka
 ```
 
